@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivan Bookshelf Web Application</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <h1>Bookshelf App</h1>
+  <h2>Search for a book in our Library</h2>
+  <nav>
+    
+    <section class="search">
+      <input placeholder="Search" />
+      <button class="searchBtn">Search</button>
+      <!-- </section> -->
+
+      <!-- <section class="sort"> -->
+      <label>Sort by</label>
+      <select class="sortBy">
+        <option value="titleaz">Title A-Z</option>
+        <option value="titleza">Title Z-A</option>
+      </select>
+    </section>
+
+    <section>
+      You have <span class="favCount">0</span> favorite books.
+      <button class="favUpdateBtn">Update</button>
+    </section>
+
+  </nav>
+  <!--  Update index.html: Add input fields for book 'title', 'author', 'subjects', and 'language', and a 'button' for submitting the form to add a new book. Use HTML 'form' element and input fields such as 'input' and 
+    button' to create the form.-->
+  <form id="addBookForm" action="">
+    <h2>Add a book to our library</h2>
+    <!-- <div id="userInputArea"> -->
+      <label>title:</label>
+      <input id="title"> 
+      <label>author: </label>
+      <input id="author">
+      <label>subject:</label>
+      <input id="subject">
+      <label>language:</label>
+      <input id="language">
+      <input type=submit value= addBook id="userInputButton"></input>
+    <!-- </div> -->
+  </form>
+
+<!-- <input id="comment-area" type="text" min = "0" max = "280"> -->
+
+  <main id="app">
+    <ul class="books"></ul>
+  </main>
+
+  <script src="js/book-data.js"></script>
+  <script src="js/book.js"></script>
+  <script src="js/bookshelf.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
