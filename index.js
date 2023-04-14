@@ -14,7 +14,7 @@
 // --------------------------
 const bookshelfElement = document.querySelector(".books"); // select all the books from the element class in html 
 const bookshelf = new Bookshelf(bookshelfElement); // create a new instance of Bookshelf with the books selected above
-bookshelf.seed(bookData); 
+bookshelf.seed(bookData);
 //#endregion Initialization
 
 

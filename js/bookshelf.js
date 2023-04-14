@@ -11,7 +11,7 @@ class Bookshelf {
     this.visibleBooks = books;
   }
 
- 
+
   /**
    * Process an array of raw book information
    * to initialize Bookshelf properties
@@ -52,11 +52,12 @@ class Bookshelf {
   render() {
     /* NOTE: Change render! This is currently a barebones template. */
     const ul = document.createElement("ul");
+    ul.classList.add("bookshelf")
     const books = this.visibleBooks.map((b) => b.render());
     ul.replaceChildren(...books);
     this.htmlElement.replaceChildren(ul);
   };
-  
+
   // render() {
   //   /* NOTE: Change render! This is currently a barebones template. */
   //   const ul = document.createElement("ul");
@@ -64,7 +65,7 @@ class Bookshelf {
   //   ul.replaceChildren(...books);
   //   this.htmlElement.replaceChildren(ul);
   // };
-  
+
 
   /**
    * @returns the number of favorite books

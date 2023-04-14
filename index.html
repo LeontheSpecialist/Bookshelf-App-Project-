@@ -10,47 +10,59 @@
 </head>
 
 <body>
+
+  <ul class="navigationBar">
+    <li class="navigationBarList"><a href="index.html">Bookshelf App</a class=navbartoggle></li>
+    <li class="navigationBarList"><a href="about.html">About</a></li>
+    <li class="navigationBarList"><a href="contact.html">Contact</a></li>
+  </ul>
+
+
   <h1>Bookshelf App</h1>
-  <h2>Search for a book in our Library</h2>
+ 
   <nav>
-    
+    <h4> Search for a book in our Library</h2>
+
     <section class="search">
-      <input placeholder="Search" />
-      <button class="searchBtn">Search</button>
-      <!-- </section> -->
+      <input class="search-field" placeholder="Search by Title" />
+      <button class="searchBtn">Search by Title</button>
+  </nav>
 
-      <!-- <section class="sort"> -->
-      <label>Sort by</label>
-      <select class="sortBy">
-        <option value="titleaz">Title A-Z</option>
-        <option value="titleza">Title Z-A</option>
-      </select>
+  <nav>
+    <label>Sort Books from</label>
+    <select class="sortBy">
+      <option value="titleaz">Title A-Z</option>
+      <option value="titleza">Title Z-A</option>
+    </select>
     </section>
+  </nav>
 
+  <nav>
     <section>
-      You have <span class="favCount">0</span> favorite books.
+      You have <span class="favCount">0</span> favorite books. Click ♡ ==> ❤️ to select favorites
       <button class="favUpdateBtn">Update</button>
     </section>
-
   </nav>
+
+
   <!--  Update index.html: Add input fields for book 'title', 'author', 'subjects', and 'language', and a 'button' for submitting the form to add a new book. Use HTML 'form' element and input fields such as 'input' and 
     button' to create the form.-->
   <form id="addBookForm" action="">
     <h2>Add a book to our library</h2>
     <!-- <div id="userInputArea"> -->
-      <label>title:</label>
-      <input id="title"> 
-      <label>author: </label>
-      <input id="author">
-      <label>subject:</label>
-      <input id="subject">
-      <label>language:</label>
-      <input id="language">
-      <input type=submit value= addBook id="userInputButton"></input>
+    <label>title:</label>
+    <input id="title">
+    <label>author: </label>
+    <input id="author">
+    <label>subject:</label>
+    <input id="subject">
+    <label>language:</label>
+    <input id="language">
+    <input type=submit value=addBook id="userInputButton"></input>
     <!-- </div> -->
   </form>
 
-<!-- <input id="comment-area" type="text" min = "0" max = "280"> -->
+  <!-- <input id="comment-area" type="text" min = "0" max = "280"> -->
 
   <main id="app">
     <ul class="books"></ul>

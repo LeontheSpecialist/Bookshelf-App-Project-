@@ -34,6 +34,7 @@ class Book {
     render() {
 
         const bookList = document.createElement("li")
+        bookList.classList.add("bookList")
 
         const titleh1 = document.createElement("h1");
         titleh1.textContent = this.title;
@@ -88,9 +89,9 @@ class Book {
         // Add event listener for "input" event on commnentsInput
         commentsInput.addEventListener("input", () => {
             const commentText = commentsInput.value.trim();  // create own const within func that is current 'trim' comment
-            if (commentText.length > 280){  // set 'if' statememt 
+            if (commentText.length > 280) {  // set 'if' statememt 
                 //If comment text exceeds 280 characters, 'slice' it
-                commentsInput.value = commentText.slice(0,280);
+                commentsInput.value = commentText.slice(0, 280);
             }
         });
 
@@ -106,8 +107,8 @@ class Book {
                 this.commentsInput.value = "";
             }
         });
-        
-    bookList.append(commentsSection)
+
+        bookList.append(commentsSection)
 
         return bookList;
     }

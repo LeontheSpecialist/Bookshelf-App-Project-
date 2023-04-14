@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 50px;
   background: white;
-  border: 2px black solid;
+  /* border: 2px black solid; */
 
 }
 
@@ -17,30 +17,35 @@ nav {
   gap: 2rem;
   border: 2px orange solid;
   padding: 10px;
-  
+
 }
 
-ul {
-  /* list-style: none; */
+.search {
+  margin: 0;
+  display: flex;
+
+}
+.search-field {
+  width: 100%;
+}
+
+ul.books {
+
   /* width: 600px; */
-  
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  /* border-style: solid  */
-  border: 3px solid blue
+  /* border: 3px solid blue */
 }
 
-li {
-  margin: 12px;
+/* li {
+  margin: 10px;
   border: 2px violet solid;
   padding: 20px;
-  border-radius: 50px;
-
-}
-
-
-li:before {
+  /* border-radius: 50px; */
+/* list-style: none;
+} */
+*/ li:before {
   float: left;
   display: block;
   /* content: '\01F49B'; */
@@ -58,11 +63,7 @@ form {
 Input {
   width: 10%;
 }
-/* .bookList {
-  margin: 12px;
-  border: 2px black solid;
-  padding: 20px;
-  border-radius: 50px;
+
 
 
 
@@ -74,9 +75,84 @@ Input {
 
 } */
 
-.commentsList{
+/* .commentsList {
   border: 3px solid red
+} */
+
+
+.navigationBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 
+.navigationBarList {
+  float: left;
+}
 
+/* navigation bar anchors */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: red;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/* .bookshelf {
+  border: 3px solid red
+  
+} */
+
+
+.commentsSection {
+  border: 2px red solid;
+  border-radius: 25px;
+ 
+}
+
+.comments-input {
+  width: 50%;
+  margin: 10px 
+  
+}
+
+
+/* these are individual books */
+.bookList {
+
+  border: 2px black solid;
+  border-radius: 25px;
+  padding: 7px 8px;
+  list-style-type: none;
+}
+
+
+li {
+  border: 2px #333 solid;
+  border-radius: 25px;
+  padding: 7px 8px;
+ 
+}
+
+/* not needed */
+/* .commentsList 
+{
+  border: 2px purple solid;
+  border-radius: 25px;
+} */
