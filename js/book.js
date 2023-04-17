@@ -72,8 +72,11 @@ class Book {
         const commentsInput = document.createElement("Input")
         commentsInput.type = "text"  // limits it to text
         commentsInput.placeholder = "Leave a comment (max 280 characters)"// tells user to input text
+        
         commentsInput.classList.add("comments-input")
         commentsSection.append(commentsInput)
+        
+        
 
         // Create comments button
         const commentsButton = document.createElement("button")
@@ -86,13 +89,16 @@ class Book {
         commentsList.classList.add("commentsList");
         commentsSection.append(commentsList);
 
+        // set a limit of 280 characters on comment
         // Add event listener for "input" event on commnentsInput
         commentsInput.addEventListener("input", () => {
             const commentText = commentsInput.value.trim();  // create own const within func that is current 'trim' comment
             if (commentText.length > 280) {  // set 'if' statememt 
                 //If comment text exceeds 280 characters, 'slice' it
                 commentsInput.value = commentText.slice(0, 280);
+                
             }
+            
         });
 
         // Add event listener to comments button
@@ -104,7 +110,8 @@ class Book {
                 comment.textContent = commentText;
                 commentsList.append(comment);
                 this.comments.push(commentText);
-                this.commentsInput.value = "";
+                commentsInput.value = "";  // clears commments input field
+                
             }
         });
 

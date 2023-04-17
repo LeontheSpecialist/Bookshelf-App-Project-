@@ -38,6 +38,13 @@ document.querySelector('form').addEventListener('submit', function (event) {
     // use array.push to add new book object to the bookData array.
     bookshelf.addBook(newBook);
     bookshelf.render(); // Update DOM to display the newly added book
+
+        // the following clears their respective fields after hitting 'addBook' 
+    document.getElementById('title').value = ""
+    document.getElementById('author').value = ""
+    document.getElementById('subject').value = ""
+    document.getElementById('language').value = ""
+
 })
 
 // --------------------------
@@ -63,6 +70,7 @@ searchBtn.addEventListener("click", () => {
     const query = searchInput.value.toLowerCase();
     const searchFn = (b) => b.title.toLowerCase().includes(query);
     bookshelf.filterVisibleBooks(searchFn);
+    searchInput.value = "" // clears searchInput field after search
 });
 
 //#endregion Searching
